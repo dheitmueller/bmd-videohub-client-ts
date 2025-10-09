@@ -36,7 +36,7 @@
     "client",
     "library"
   ],
-  "author": "",
+  "author": "Lucas Kirsche",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^30.0.0",
@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/bmd-videohub-client.git"
+    "url": "git+https://github.com/lukirs95/bmd-videohub-client.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/bmd-videohub-client/issues"
+    "url": "https://github.com/lukirs95/bmd-videohub-client/issues"
   },
-  "homepage": "https://github.com/yourusername/bmd-videohub-client#readme"
+  "homepage": "https://github.com/lukirs95/bmd-videohub-client#readme"
 }
