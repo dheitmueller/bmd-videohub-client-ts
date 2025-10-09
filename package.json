@@ -1,0 +1,57 @@
+{
+  "name": "bmd-videohub-client",
+  "version": "1.0.0",
+  "description": "TypeScript client library for BlackMagic Design VideoHub",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "example": "tsx example.ts",
+    "example:debug": "tsx --inspect example.ts"
+  },
+  "keywords": [
+    "blackmagic",
+    "videohub",
+    "typescript",
+    "client",
+    "library"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/bmd-videohub-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/bmd-videohub-client/issues"
+  },
+  "homepage": "https://github.com/yourusername/bmd-videohub-client#readme"
+}
