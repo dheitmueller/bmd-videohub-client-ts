@@ -1,4 +1,4 @@
-import {Protocol} from "./types";
+import {Protocol} from "./types.js";
 
 export const parseProtocol = (lines: string[]): Protocol => {
   for (const line of lines) {

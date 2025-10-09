@@ -1,4 +1,4 @@
-import {OutputLock, OutputLocks} from "./types";
+import {OutputLock, OutputLocks} from "./types.js";
 
 export const parseOutputLocks = (lines: string[]): OutputLocks => {
   const locks = new Map<number, OutputLock>

@@ -1,4 +1,4 @@
-import {Route} from "./types";
+import {Route} from "./types.js";
 
 export const parseOutputRouting = (lines: string[]): Route[] => {
   const routes: Route[] = []

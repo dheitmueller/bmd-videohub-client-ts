@@ -1,6 +1,6 @@
 {
   "name": "bmd-videohub-client-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript client library for BlackMagic Design VideoHub",
   "type": "module",
   "main": "dist/index.js",

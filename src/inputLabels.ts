@@ -1,4 +1,4 @@
-import {InputLabel, InputLabels} from "./types";
+import {InputLabel, InputLabels} from "./types.js";
 
 export const parseInputLabels = (lines: string[]): InputLabels => {
   const labels = new Map<number, InputLabel>

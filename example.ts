@@ -1,4 +1,4 @@
-import { VideohubClient } from './src';
+import { VideohubClient } from './src/index.js';
 
 async function main() {
   const client = new VideohubClient('192.168.0.1', 9990);

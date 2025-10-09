@@ -1,4 +1,4 @@
-import {DeviceInfo} from "./types";
+import {DeviceInfo} from "./types.js";
 
 export const parseDeviceInfo = (lines: string[]): DeviceInfo => {
   const deviceInfo: DeviceInfo = {

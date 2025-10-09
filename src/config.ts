@@ -1,4 +1,4 @@
-import {Configuration} from "./types";
+import {Configuration} from "./types.js";
 
 export const parseConfig = (lines: string[]): Configuration => {
   const configuration: Configuration = {

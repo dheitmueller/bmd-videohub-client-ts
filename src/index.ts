@@ -1,13 +1,13 @@
 import {EventEmitter} from "node:events";
 import {Socket} from "node:net";
-import {parseProtocol} from "./protocol";
-import {parseDeviceInfo} from "./deviceInfo";
-import {parseInputLabels} from "./inputLabels";
-import {parseOutputLabels} from "./outputLabels";
-import {parseOutputLocks} from "./outputLocks";
-import {parseOutputRouting} from "./outputRouting";
-import {parseConfig} from "./config";
-import {Route, VideohubClientEvents} from "./types";
+import {parseProtocol} from "./protocol.js";
+import {parseDeviceInfo} from "./deviceInfo.js";
+import {parseInputLabels} from "./inputLabels.js";
+import {parseOutputLabels} from "./outputLabels.js";
+import {parseOutputLocks} from "./outputLocks.js";
+import {parseOutputRouting} from "./outputRouting.js";
+import {parseConfig} from "./config.js";
+import {Route, VideohubClientEvents} from "./types.js";
 
 const delimiter: string = "\n\n";
 
