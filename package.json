@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lukirs95/bmd-videohub-client.git"
+    "url": "git+https://github.com/lukirs95/bmd-videohub-client-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/lukirs95/bmd-videohub-client/issues"
+    "url": "https://github.com/lukirs95/bmd-videohub-client-ts/issues"
   },
-  "homepage": "https://github.com/lukirs95/bmd-videohub-client#readme"
+  "homepage": "https://github.com/lukirs95/bmd-videohub-client-ts#readme"
 }

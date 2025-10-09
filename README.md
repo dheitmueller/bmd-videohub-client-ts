@@ -15,13 +15,13 @@ A TypeScript client library for controlling BlackMagic Design VideoHub devices o
 ## Installation
 
 ```bash
-npm install bmd-videohub-client
+npm install bmd-videohub-client-ts
 ```
 
 ## Quick Start
 
 ```typescript
-import { VideohubClient } from 'bmd-videohub-client';
+import { VideohubClient } from 'bmd-videohub-client-ts';
 
 const client = new VideohubClient();
 
@@ -104,7 +104,7 @@ enum OutputLock {
 ### Monitor All Device Changes
 
 ```typescript
-import { VideohubClient } from 'bmd-videohub-client';
+import { VideohubClient } from 'bmd-videohub-client-ts';
 
 const client = new VideohubClient();
 
@@ -179,8 +179,8 @@ This library implements the BlackMagic Design VideoHub Ethernet Protocol v2.3. I
 ### Setup
 
 ```bash
-git clone https://github.com/lukirs95/bmd-videohub-client.git
-cd bmd-videohub-client
+git clone https://github.com/lukirs95/bmd-videohub-client-ts.git
+cd bmd-videohub-client-ts
 npm install
 ```
 
@@ -223,9 +223,9 @@ MIT
 
 ## Support
 
-- 📖 [Documentation](https://github.com/lukirs95/bmd-videohub-client#readme)
-- 🐛 [Issues](https://github.com/lukirs95/bmd-videohub-client/issues)
-- 💬 [Discussions](https://github.com/lukirs95/bmd-videohub-client/discussions)
+- 📖 [Documentation](https://github.com/lukirs95/bmd-videohub-client-ts#readme)
+- 🐛 [Issues](https://github.com/lukirs95/bmd-videohub-client-ts/issues)
+- 💬 [Discussions](https://github.com/lukirs95/bmd-videohub-client-ts/discussions)
 
 ## Related
 
