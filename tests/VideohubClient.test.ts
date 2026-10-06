@@ -289,6 +289,20 @@ Take Mode: false
       await expect(client.connect()).rejects.toBe(testError);
     });
 
+    test('should preserve socket error handling while disconnecting', async () => {
+      mockSocket.once.mockImplementation((event: string, callback: Function) => {
+        if (event === 'connect') setTimeout(() => callback(), 0);
+        return mockSocket;
+      });
+
+      await client.connect();
+      await client.disconnect();
+
+      expect(mockSocket.destroy).toHaveBeenCalled();
+      expect(mockSocket.removeAllListeners).not.toHaveBeenCalled();
+      expect(mockSocket.resetAndDestroy).not.toHaveBeenCalled();
+    });
+
   });
 
   describe('Data Parsing', () => {

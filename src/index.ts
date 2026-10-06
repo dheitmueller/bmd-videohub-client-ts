@@ -40,8 +40,7 @@ export class VideohubClient extends EventEmitter<VideohubClientEvents> {
 
   async connect(timeout: number = 2000): Promise<void> {
     if (this.socket) {
-      this.socket.resetAndDestroy();
-      this.socket.removeAllListeners();
+      this.socket.destroy();
     }
 
     return new Promise<void>((resolve, reject) => {
@@ -51,6 +50,7 @@ export class VideohubClient extends EventEmitter<VideohubClientEvents> {
       this.socket.setEncoding('ascii')
 
       const to = setTimeout(() => {
+        this.socket.destroy();
         reject(new Error("Connection timeout"));
       }, timeout)
 
@@ -59,7 +59,10 @@ export class VideohubClient extends EventEmitter<VideohubClientEvents> {
         resolve()
       });
 
-      this.socket.once("error", err => reject(err));
+      this.socket.once("error", err => {
+        clearTimeout(to);
+        reject(err);
+      });
 
       this.setupEventListeners();
 
@@ -68,11 +71,7 @@ export class VideohubClient extends EventEmitter<VideohubClientEvents> {
   }
 
   async disconnect(): Promise<void> {
-    return new Promise(resolve => {
-      this.socket.removeAllListeners();
-      this.socket.resetAndDestroy();
-      resolve();
-    })
+    this.socket?.destroy();
   }
 
   async setRoute(route: Route): Promise<void> {
