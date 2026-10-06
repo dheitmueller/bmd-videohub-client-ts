@@ -79,6 +79,20 @@ export class VideohubClient extends EventEmitter<VideohubClientEvents> {
     return this.write(`VIDEO OUTPUT ROUTING:\n${route.target} ${route.source}\n\n`)
   }
 
+  async setInputLabel(input: number, label: string): Promise<void> {
+    return this.setLabel("INPUT LABELS:", input, label);
+  }
+
+  async setOutputLabel(output: number, label: string): Promise<void> {
+    return this.setLabel("OUTPUT LABELS:", output, label);
+  }
+
+  private async setLabel(command: "INPUT LABELS:" | "OUTPUT LABELS:", port: number, label: string): Promise<void> {
+    if (!Number.isInteger(port) || port < 0) throw new Error("Port index must be a non-negative integer");
+    if (/[\r\n]/.test(label)) throw new Error("Labels cannot contain line breaks");
+    return this.write(`${command}\n${port} ${label}\n\n`);
+  }
+
   private async write(msg: string): Promise<void> {
     if (this.pendingOperation) {
       throw new Error('Another operation is pending');

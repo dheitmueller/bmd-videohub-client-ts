@@ -569,6 +569,24 @@ Take Mode: false
     });
   });
 
+  describe('Label Methods', () => {
+    test('should send an input label command', async () => {
+      const write = jest.spyOn(client as any, 'write').mockResolvedValue(undefined);
+      await client.setInputLabel(3, 'Camera 4');
+      expect(write).toHaveBeenCalledWith('INPUT LABELS:\n3 Camera 4\n\n');
+    });
+
+    test('should send an output label command', async () => {
+      const write = jest.spyOn(client as any, 'write').mockResolvedValue(undefined);
+      await client.setOutputLabel(5, 'Program');
+      expect(write).toHaveBeenCalledWith('OUTPUT LABELS:\n5 Program\n\n');
+    });
+
+    test('should reject line breaks in labels', async () => {
+      await expect(client.setInputLabel(0, 'Camera\nOUTPUT LABELS:')).rejects.toThrow('Labels cannot contain line breaks');
+    });
+  });
+
   describe('Error Handling', () => {
     test('should emit error event from socket', (done) => {
       const testError = new Error('Socket error');

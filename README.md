@@ -63,6 +63,14 @@ Changes video routing by connecting a source input to a target output.
 - `source` - Input port number (0-based)
 - `target` - Output port number (0-based)
 
+##### `setInputLabel(input: number, label: string): Promise<void>`
+
+Changes the label assigned to a zero-based video input.
+
+##### `setOutputLabel(output: number, label: string): Promise<void>`
+
+Changes the label assigned to a zero-based video output.
+
 ##### `disconnect(): void`
 
 Closes the connection to the VideoHub device.
